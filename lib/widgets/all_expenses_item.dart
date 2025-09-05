@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:responsev_dash_bord/models/all_expenses_item_model.dart';
-import 'package:responsev_dash_bord/widgets/all_expenses_item_header.dart';
+import 'package:responsev_dash_bord/widgets/inactive_and_active_expenses_item.dart';
 
 class AllExpensesItem extends StatelessWidget {
-  const AllExpensesItem({super.key, required this.itemModel});
+  const AllExpensesItem({
+    super.key,
+    required this.itemModel,
+    required this.isSeclected,
+  });
   final AllExpensesItemModel itemModel;
+  final bool isSeclected;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: ShapeDecoration(
-        shape: RoundedRectangleBorder(
-          side: BorderSide(width: 1, color: Color(0xffF1F1F1)),
-          borderRadius: BorderRadius.circular(12),
-        ),
-      ),
-      child: Column(children: [AllExpensesItemHeader(image: itemModel.image)]),
-    );
+    return isSeclected
+        ? ActiveExpensesItem(itemModel: itemModel)
+        : InActiveExpensesItem(itemModel: itemModel);
   }
 }
