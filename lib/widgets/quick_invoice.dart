@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'package:responsev_dash_bord/widgets/custom_background_container.dart';
+import 'package:responsev_dash_bord/widgets/latest_transaction.dart';
+import 'package:responsev_dash_bord/widgets/quick_invice_header.dart';
+
+class QuickInvoice extends StatelessWidget {
+  const QuickInvoice({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CustomBackgrounContainer(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          QuickInvoiceHeader(),
+          SizedBox(height: 24),
+          LatestTransaction(),
+        ],
+      ),
+    );
+  }
+}
