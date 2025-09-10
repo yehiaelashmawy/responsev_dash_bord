@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsev_dash_bord/utils/app_style.dart';
-import 'package:responsev_dash_bord/widgets/custom_background_container.dart';
 import 'package:responsev_dash_bord/widgets/dots_indcarors.dart';
 import 'package:responsev_dash_bord/widgets/my_cards_page_view.dart';
 
@@ -29,20 +28,13 @@ class _MyCardSecationState extends State<MyCardSecation> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 40),
-        CustomBackgrounContainer(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('My Card', style: AppStyle.styleSemiBold20),
-              SizedBox(height: 20),
-              MyCardsPageView(pageController: pageController),
-              SizedBox(height: 20),
-              DotsIndcarors(currentPageIndex: currentPageIndex),
-            ],
-          ),
-        ),
+        Text('My Card', style: AppStyle.styleSemiBold20),
+        SizedBox(height: 20),
+        MyCardsPageView(pageController: pageController),
+        SizedBox(height: 20),
+        DotsIndcarors(currentPageIndex: currentPageIndex),
       ],
     );
   }
