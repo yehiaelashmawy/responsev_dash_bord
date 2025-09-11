@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:responsev_dash_bord/views/dashbord_view.dart';
 
 void main() {
-  runApp(const ResponsevDashBord());
+  runApp(
+    // DevicePreview(
+    //   enabled: true,
+    //   builder: (context) => const ResponsevDashBord(),
+    // ),
+    const ResponsevDashBord(),
+  );
 }
 
 class ResponsevDashBord extends StatelessWidget {
