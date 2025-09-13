@@ -39,10 +39,7 @@ class _DashbordViewState extends State<DashbordView> {
           ? CustomDrawar()
           : null,
       body: AdaptiveLayout(
-        mobileLayout: (context) => Padding(
-          padding: const EdgeInsets.only(left: 24.0, right: 24),
-          child: DashbordMobileLayout(),
-        ),
+        mobileLayout: (context) => DashbordMobileLayout(),
         tablateLayout: (context) => DashbordTabletLayout(),
         desktopLayout: (context) => DashbordDesktopLayout(),
       ),
