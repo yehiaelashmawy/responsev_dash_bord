@@ -16,10 +16,15 @@ class ItemsDetails extends StatelessWidget {
           shape: OvalBorder(),
         ),
       ),
-      title: Text(itemDetailsModel.title, style: AppStyle.styleRegular16),
+      title: Text(
+        itemDetailsModel.title,
+        style: AppStyle.styleRegular16(context),
+      ),
       trailing: Text(
         itemDetailsModel.value,
-        style: AppStyle.styleMedium16.copyWith(color: Color(0xff208CC8)),
+        style: AppStyle.styleMedium16(
+          context,
+        ).copyWith(color: Color(0xff208CC8)),
       ),
     );
   }

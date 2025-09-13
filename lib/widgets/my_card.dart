@@ -29,9 +29,14 @@ class MyCard extends StatelessWidget {
               contentPadding: EdgeInsets.only(right: 42, left: 31, top: 16),
               title: Text(
                 'Name card',
-                style: AppStyle.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyle.styleRegular16(
+                  context,
+                ).copyWith(color: Colors.white),
               ),
-              subtitle: Text('Syah Bandi', style: AppStyle.styleMedium20),
+              subtitle: Text(
+                'Syah Bandi',
+                style: AppStyle.styleMedium20(context),
+              ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
             Expanded(child: SizedBox()),
@@ -43,16 +48,16 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style: AppStyle.styleSemiBold24.copyWith(
-                      color: Colors.white,
-                    ),
+                    style: AppStyle.styleSemiBold24(
+                      context,
+                    ).copyWith(color: Colors.white),
                   ),
                   SizedBox(height: 12),
                   Text(
                     '12/20 - 124',
-                    style: AppStyle.styleRegular16.copyWith(
-                      color: Colors.white,
-                    ),
+                    style: AppStyle.styleRegular16(
+                      context,
+                    ).copyWith(color: Colors.white),
                   ),
                 ],
               ),

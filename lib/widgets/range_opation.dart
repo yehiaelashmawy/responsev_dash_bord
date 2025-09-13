@@ -17,7 +17,7 @@ class RangeOpatin extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text('Monthly', style: AppStyle.styleMedium16),
+          Text('Monthly', style: AppStyle.styleMedium16(context)),
           SizedBox(width: 18),
           Transform.rotate(
             angle: -1.5708,
