@@ -5,7 +5,7 @@ import 'package:responsev_dash_bord/views/dashbord_view.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (context) => const ResponsevDashBord(),
     ),
     // const ResponsevDashBord(),

@@ -14,7 +14,11 @@ class ActiveExpensesItem extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
         color: Color(0xff4EB7F2),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(
+          side: BorderSide(width: 1, color: Color(0xff4EB7F2)),
+
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,25 +30,34 @@ class ActiveExpensesItem extends StatelessWidget {
             imageColor: Colors.white,
           ),
           SizedBox(height: 34),
-          Text(
-            itemModel.title,
-            style: AppStyle.styleSemiBold16(
-              context,
-            ).copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.title,
+              style: AppStyle.styleSemiBold16(
+                context,
+              ).copyWith(color: Colors.white),
+            ),
           ),
           SizedBox(height: 8),
-          Text(
-            itemModel.date,
-            style: AppStyle.styleRegular14(
-              context,
-            ).copyWith(color: Color(0xffFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.date,
+              style: AppStyle.styleRegular14(
+                context,
+              ).copyWith(color: Color(0xffFAFAFA)),
+            ),
           ),
           SizedBox(height: 16),
-          Text(
-            itemModel.price,
-            style: AppStyle.styleSemiBold24(
-              context,
-            ).copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.price,
+              style: AppStyle.styleSemiBold24(
+                context,
+              ).copyWith(color: Colors.white),
+            ),
           ),
           SizedBox(height: 16),
         ],
@@ -78,11 +91,29 @@ class InActiveExpensesItem extends StatelessWidget {
             imageColor: null,
           ),
           SizedBox(height: 34),
-          Text(itemModel.title, style: AppStyle.styleSemiBold16(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.title,
+              style: AppStyle.styleSemiBold16(context),
+            ),
+          ),
           SizedBox(height: 8),
-          Text(itemModel.date, style: AppStyle.styleRegular14(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.date,
+              style: AppStyle.styleRegular14(context),
+            ),
+          ),
           SizedBox(height: 16),
-          Text(itemModel.price, style: AppStyle.styleSemiBold24(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.price,
+              style: AppStyle.styleSemiBold24(context),
+            ),
+          ),
           SizedBox(height: 16),
         ],
       ),
